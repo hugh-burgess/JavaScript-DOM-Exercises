@@ -3,9 +3,6 @@ const data = [];
 let form = document.querySelector(".super-form");
 
 form.addEventListener("submit", (event) => {
-  if (document.getElementById("married") === "on") {
-    document.getElementById("married").value = "checked";
-  }
   event.preventDefault();
 
   const inputForName = form["name"];
@@ -17,7 +14,7 @@ form.addEventListener("submit", (event) => {
   const object = {
     name: inputForName.value,
     age: inputForAge.value,
-    married: inputForMarried.value,
+    married: inputForMarried.checked,
     hobbies: inputForHobbies.value,
   };
 
